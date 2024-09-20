@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+:root {
+  --background-color: radial-gradient(circle at 50% 50%,
+      #2f3040,
+      #1f2020);
+}
+
+
+/* Mouse Trail */
+.star {
+  transform-style: preserve-3d;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  color: red;
+}
+
+.star:before {
+  position: absolute;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  text-shadow: 0 0 .8em #fff5;
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #F9F6EF;
+  background-image:
+    radial-gradient(circle at 50% 50%,
+      #2f3040,
+      #1f2020);
+}
+
+.insta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-rectangle {
+  position: absolute;
+  bottom: -200px;
+  width: 280px;
+  height: 50px;
+  background-color: #222327;
+  z-index: 100000;
+}
