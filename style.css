@@ -11,6 +11,9 @@
 }
 
 
+
+/* Body */
+
 body {
   padding: 0;
   margin: 0;
@@ -23,9 +26,16 @@ body {
       #1f2020);
   font-family: var(--primary-font);
 }
-
 * {
   box-sizing: border-box;
+}
+
+
+/* resetting */
+h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 110%;
 }
 
 
@@ -46,7 +56,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   padding: 4vmin;
-  gap: 24px;
+  gap: 64px;
 }
 
 .hero-logo {
@@ -65,6 +75,52 @@ body {
   filter: drop-shadow(0px 0px 10px rgba(146, 193, 255, 0.333));
   z-index: 10000;
 }
+
+
+
+/* Text + Rate */
+
+.text-and-rate {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* Review Section */
+
+.review-wrapper {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.rated-5 {
+  width: 80px;
+}
+
+.review-icons {
+  width: 140px;
+}
+
+
+
+/* Foil */
+.foil-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .foil-bg {
+    display: none;
+  }
+}
+
 
 
 

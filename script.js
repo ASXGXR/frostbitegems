@@ -1,5 +1,6 @@
 // Star Mouse Trail
 const starSize = 0.5; // Star scale
+
 function mouseTrail() {
     let x1 = 0, y1 = 0;
     const vh = Math.max(document.documentElement.scrollHeight || 0, window.innerHeight || 0);
