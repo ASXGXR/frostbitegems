@@ -2,7 +2,7 @@ function mouseTrail() {
     let x1 = 0, y1 = 0;
     const vh = Math.max(document.documentElement.scrollHeight || 0, window.innerHeight || 0);
     const dist_to_draw = 50, delay = 1000;
-    const starSize = 0.3; // Star scale
+    const starSize = 0.4; // Star scale
     const fsize = [
         `${0.8 * starSize}rem`,
         `${1.1 * starSize}rem`,
