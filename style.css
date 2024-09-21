@@ -52,11 +52,9 @@ h2 {
 /* Hero Section */
 
 .hero-section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 4vmin;
   gap: 64px;
 }
 
@@ -67,14 +65,14 @@ h2 {
 }
 
 .hero-image {
-  height: 90vmin;
+  height: 75vmin;
+  max-height
   width: auto;
   position: absolute;
   right: 0;
   bottom: 0;
   transform: scaleX(-1);
   filter: drop-shadow(0px 0px 10px rgba(146, 193, 255, 0.333));
-  z-index: 10000;
 }
 
 
@@ -128,7 +126,7 @@ h2 {
 /* Scrolling Banner */
 
 .slider{
-  margin-top: 16px;
+  margin: 24px 0px;
   width: 100%;
   height: var(--height);
   overflow: hidden;
@@ -156,6 +154,7 @@ h2 {
   font-family: var(--secondary-font);
   color: #575757;
   font-size: 18px;
+  cursor: default;
 }
 .slider .list .item img{
   width: 100%;
@@ -236,4 +235,17 @@ button {
 
 button:hover {
   box-shadow: none;
+}
+
+
+
+/* Extras */
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none !important;
 }
