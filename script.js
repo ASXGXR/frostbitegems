@@ -1,3 +1,4 @@
+// Star Mouse Trail
 function mouseTrail() {
     let x1 = 0, y1 = 0;
     const vh = Math.max(document.documentElement.scrollHeight || 0, window.innerHeight || 0);
@@ -44,6 +45,4 @@ function mouseTrail() {
         }
     });
 }
-
-// Initialise Star Mouse Trail
 mouseTrail();
