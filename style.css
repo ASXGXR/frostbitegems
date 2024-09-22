@@ -68,7 +68,7 @@ h2 {
 }
 
 .hero-image {
-  height: 75vmin;
+  height: 72vmin;
   width: auto;
   position: absolute;
   right: 0;
@@ -127,6 +127,10 @@ h2 {
   width: 100%;
   height: auto;
   opacity: 0.5;
+}
+.foil-bg {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 100%);
+  mask-image: linear-gradient(to bottom, transparent, black 100%);
 }
 
 
