@@ -235,7 +235,7 @@ button {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   font-family: var(--primary-font);
   border-radius: var(--radius);
-  padding: 16px 24px;
+  padding: 16px 32px;
   font-size: 20px;
   width: auto;
   color: #575757;
@@ -251,7 +251,6 @@ button:hover {
 }
 
 .book-btn {
-  width: 200px;
   cursor: pointer !important;
 }
 
