@@ -319,7 +319,7 @@ button {
   font-family: var(--primary-font);
   border-radius: var(--radius);
   padding: 16px 24px;
-  font-size: clamp(18px, 2vmin, 22px);
+  font-size: clamp(16px, 2.7vmin, 20px);
   width: auto;
   position: relative;
   border: none;
