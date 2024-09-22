@@ -125,12 +125,6 @@ h2 {
   height: auto;
   opacity: 0.5;
 }
-@media (min-width: 768px) {
-  .foil-bg {
-    display: none;
-  }
-}
-
 
 
 
@@ -244,6 +238,7 @@ button {
   width: auto;
   color: #575757;
   background-color: white;
+  position: relative;
   z-index: 10000;
 }
 
@@ -337,8 +332,20 @@ button:hover {
   }
 }
 
-
 .b-button-wrapper {
   position: relative;
   width: fit-content;
+}
+
+
+
+/* Larger Screens (Laptop) */
+
+@media (min-width: 768px) {
+  .sparklestar {
+    display: none;
+  }
+  .foil-bg {
+    display: none;
+  }
 }
