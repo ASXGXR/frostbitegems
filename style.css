@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@font-face {
+  font-family: 'Benn Light Italic';
+  src: url('fonts/Benn Light Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
 
 :root {
   --background-color: radial-gradient(circle at 50% 50%,
@@ -7,6 +14,7 @@
       #1f2020);
   --primary-font: 'Bowlby One', sans-serif;
   --secondary-font: 'Coiny', cursive;
+  --tertiary-font: 'Benn Light Italic', sans-serif;
   --radius: 24px;
 }
 
@@ -31,11 +39,14 @@ body {
 }
 
 
-/* resetting */
+/* resetting classes */
 h2 {
   margin: 0;
   font-size: 22px;
   line-height: 110%;
+}
+p {
+  margin: 0;
 }
 
 
@@ -46,6 +57,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 48px;
 }
 
 
@@ -65,6 +77,24 @@ h2 {
   width: 75vmin;
   height: auto;
   box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+
+  gap: 8px;
+  display: flex;
+  padding: 20px 32px;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo img {
+  width: 100%;
+}
+
+.logo-text {
+  font-size: clamp(20px, 4vw, 32px);
+  opacity: 0.8;
+  color: black;
+  font-family: var(--tertiary-font);
 }
 
 .hero-image {
@@ -75,7 +105,7 @@ h2 {
   bottom: 0;
   transform: scaleX(-1);
   filter: drop-shadow(0px 0px 10px rgba(146, 193, 255, 0.333));
-  z-index: 10000;
+  z-index: 1;
 }
 
 
@@ -100,21 +130,22 @@ h2 {
 /* Review Section */
 
 .review-wrapper {
-  gap: 12px;
+  gap: 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
 .rated-5 {
-  width: 80px;
+  width: 72px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .review-icons {
-  width: 140px;
+  width: 130px;
+  z-index: 2;
 }
 
 
@@ -126,7 +157,8 @@ h2 {
   left: 0;
   width: 100%;
   height: auto;
-  opacity: 0.5;
+  opacity: 0.3;
+  z-index: -1;
 }
 .foil-bg {
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 100%);
@@ -250,7 +282,7 @@ button {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 button img {
@@ -263,6 +295,15 @@ button:hover {
   box-shadow: none;
 }
 
+.arrow-img {
+  transition: transform 0.48s ease;
+}
+
+.book-btn:hover .arrow-img,
+.book-btn:active .arrow-img {
+  transform: translateX(4px);
+}
+
 
 /* Extras */
 
@@ -272,6 +313,7 @@ button:hover {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -webkit-user-drag: none;
   user-select: none !important;
 }
 
@@ -359,4 +401,13 @@ button:hover {
   .foil-bg {
     display: none;
   }
+}
+
+
+.hover-scale {
+  transition: transform ease 0.5s;
+  cursor: default
+}
+.hover-scale:hover {
+  transform: scale(var(--scale));
 }
