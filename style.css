@@ -241,19 +241,14 @@ button {
   color: #575757;
   background-color: white;
   position: relative;
-  z-index: 10000;
+  z-index: 11000;
   border: none;
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 button:hover {
   box-shadow: none;
 }
-
-.book-btn {
-  cursor: pointer !important;
-}
-
 
 
 /* Extras */
