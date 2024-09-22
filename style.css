@@ -238,7 +238,7 @@ button {
   width: auto;
   color: #575757;
   background-color: white;
-  position: relative;
+  position: absolute;
   z-index: 10000;
 }
 
