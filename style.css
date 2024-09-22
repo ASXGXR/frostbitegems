@@ -54,7 +54,6 @@ h2 {
 .hero-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 64px;
 }
 
@@ -82,7 +81,16 @@ h2 {
 .text-and-rate {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
+}
+
+.hero-text-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.hero-text {
+  width: 200px;
 }
 
 
@@ -97,6 +105,9 @@ h2 {
 
 .rated-5 {
   width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .review-icons {
@@ -233,6 +244,7 @@ button {
   width: auto;
   color: #575757;
   background-color: white;
+  z-index: 10000;
 }
 
 button:hover {
@@ -259,62 +271,74 @@ button:hover {
 
 /* Sparkling Stars Around Text */
 
+:root {
+  --sparkle-dur: 2.6s;
+  --star-opac: 0.2;
+}
 
 .sparklestar {
-  position: absolute;
+  opacity: var(--star-opac);
   content: '\2726';
-  color: rgb(138, 214, 255);
-  width: 30px;
-  height: 30px;
-  opacity: 0;
   position: absolute;
-  animation: sparkle 2s infinite ease-in-out;
-  transform: rotate(45deg);
+  position: absolute;
+  color: rgb(187, 187, 187);
+  animation: sparkle var(--sparkle-dur) infinite ease-in-out;
+  font-size: 14px;
 }
 
 .sparklestar:before {
-  position: absolute;
   content: '\2726';
   color: inherit;
-  inset: 0;
-  text-shadow: 0 0 .8em #fff5;
 }
 
-/* Different Star Positions */
 .star-1 {
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
-  animation-delay: 0s;
+  color: #F9F3EE;
+  top: -10%;
+  left: -10%;
+  transform: rotate(0deg);
+  animation-delay: calc(3*var(--sparkle-dur)/4); /* 3 */
 }
 
 .star-2 {
-  top: 150px;
-  left: 20%;
-  transform: translateX(-50%) rotate(45deg);
-  animation-delay: 0.5s;
+  color: #E1F8DC;
+  bottom: -35%;
+  left: 10%;
+  transform: rotate(45deg);
+  animation-delay: calc(var(--sparkle-dur)/2); /* 2 */
 }
 
 .star-3 {
-  top: 150px;
-  right: 20%;
-  transform: translateX(50%) rotate(-45deg);
-  animation-delay: 1s;
+  color: #B8AFE6;
+  top: -35%;
+  left: 60%;
+  transform: rotate(-45deg);
+  animation-delay: 0s; /* 0 */
 }
 
 .star-4 {
-  top: 100px;
-  right: 40%;
-  transform: translateX(50%) rotate(90deg);
-  animation-delay: 1.5s;
+  color: #AEE1CD;
+  right: 10%;
+  bottom: 5%;
+  transform: rotate(90deg);
+  animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
 }
 
 /* Sparkle Animation */
 @keyframes sparkle {
   0%, 100% {
-    opacity: 0;
+    opacity: var(--star-opac);
+    transform: rotate(0deg) scale(0.9);
+    filter: blur(0px); /* Start clear */
   }
   50% {
-    opacity: 1;
+    opacity: 0.7;
+    transform: rotate(180deg) scale(1.2);
+    filter: blur(0.8px); /* Add slight blur for a glow effect */
   }
+}
+
+
+.b-button-wrapper {
+  position: relative;
+  width: fit-content;
 }
