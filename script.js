@@ -2,7 +2,6 @@
 const starSize = 0.5; // Star scale
 function mouseTrail() {
     let x1 = 0, y1 = 0;
-    const vh = Math.max(document.documentElement.scrollHeight || 0, window.innerHeight || 0);
     const dist_to_draw = 50, delay = 1000;
     const fsize = [
         `${0.8 * starSize}rem`,
@@ -28,7 +27,7 @@ function mouseTrail() {
         const fs = 10 + 5 * parseFloat(getComputedStyle(str).fontSize);
 
         str.animate({
-            translate: `0 ${(y + fs) > vh ? vh - y : fs}px`,
+            translate: `0 ${fs}px`,
             opacity: 0,
             transform: `rotateX(${rand(1, 500)}deg) rotateY(${rand(1, 500)}deg)`
         }, { duration: delay, fill: 'forwards' });
@@ -45,6 +44,4 @@ function mouseTrail() {
         }
     });
 }
-if (window.innerWidth > 768) { 
-    mouseTrail();   
-}
+mouseTrail();
