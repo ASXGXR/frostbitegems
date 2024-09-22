@@ -63,7 +63,7 @@ p {
   height: 100svh;
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 68px;
 }
 
 
@@ -94,7 +94,7 @@ p {
   background-color: var(--white);
   flex-direction: column;
   align-items: center;
-  margin-top: 96px;
+  margin-top: 116px;
 }
 
 .hero-logo img {
@@ -398,11 +398,11 @@ button:active .move-right {
 
 :root {
   --sparkle-dur: 2.6s;
-  --star-opac: 0.2;
+  --min-star-opac: 0.2;
 }
 
 .sparklestar {
-  opacity: var(--star-opac);
+  opacity: var(--min-star-opac);
   content: '\2726';
   position: absolute;
   position: absolute;
@@ -451,12 +451,12 @@ button:active .move-right {
 /* Sparkle Animation */
 @keyframes sparkle {
   0%, 100% {
-    opacity: var(--star-opac);
+    opacity: var(--min-star-opac);
     transform: rotate(0deg) scale(0.9);
     filter: blur(0px); /* Start clear */
   }
   50% {
-    opacity: 0.7;
+    opacity: 0.8;
     transform: rotate(180deg) scale(1.2);
     filter: blur(0.8px); /* Add slight blur for a glow effect */
   }
