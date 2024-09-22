@@ -46,4 +46,6 @@ function mouseTrail() {
         }
     });
 }
-mouseTrail();
+if (window.innerWidth > 768) { 
+    mouseTrail();   
+}
