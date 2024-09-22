@@ -234,12 +234,13 @@ button {
   border-radius: var(--radius);
   padding: 16px 24px;
   font-size: 20px;
-  cursor: pointer;
   width: auto;
   color: #575757;
   background-color: white;
   position: absolute;
   z-index: 10000;
+  border: none;
+  cursor: pointer;
 }
 
 button:hover {
@@ -330,11 +331,6 @@ button:hover {
     transform: rotate(180deg) scale(1.2);
     filter: blur(0.8px); /* Add slight blur for a glow effect */
   }
-}
-
-.b-button-wrapper {
-  position: relative;
-  width: fit-content;
 }
 
 
