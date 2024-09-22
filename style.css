@@ -57,6 +57,10 @@ h2 {
   gap: 64px;
 }
 
+.hero-section > * {
+  width: fit-content;
+}
+
 .hero-logo {
   width: 70vmin;
   height: auto;
@@ -86,7 +90,6 @@ h2 {
 
 .hero-text-wrapper {
   position: relative;
-  width: fit-content;
 }
 
 .hero-text {
@@ -237,14 +240,19 @@ button {
   width: auto;
   color: #575757;
   background-color: white;
-  position: absolute;
+  position: relative;
   z-index: 10000;
   border: none;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 button:hover {
   box-shadow: none;
+}
+
+.book-btn {
+  width: 200px;
+  cursor: pointer !important;
 }
 
 
