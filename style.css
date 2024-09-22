@@ -66,13 +66,13 @@ h2 {
 
 .hero-image {
   height: 75vmin;
-  max-height
   width: auto;
   position: absolute;
   right: 0;
   bottom: 0;
   transform: scaleX(-1);
   filter: drop-shadow(0px 0px 10px rgba(146, 193, 255, 0.333));
+  z-index: 10000;
 }
 
 
@@ -200,6 +200,8 @@ h2 {
 
 
 
+
+
 /* Insta Widget */
 
 .insta-wrapper {
@@ -248,4 +250,71 @@ button:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none !important;
+}
+
+
+
+
+
+
+/* Sparkling Stars Around Text */
+
+
+.sparklestar {
+  position: absolute;
+  content: '\2726';
+  color: rgb(138, 214, 255);
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+  animation: sparkle 2s infinite ease-in-out;
+  transform: rotate(45deg);
+}
+
+.sparklestar:before {
+  position: absolute;
+  content: '\2726';
+  color: inherit;
+  inset: 0;
+  text-shadow: 0 0 .8em #fff5;
+}
+
+/* Different Star Positions */
+.star-1 {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 150px;
+  left: 20%;
+  transform: translateX(-50%) rotate(45deg);
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  top: 150px;
+  right: 20%;
+  transform: translateX(50%) rotate(-45deg);
+  animation-delay: 1s;
+}
+
+.star-4 {
+  top: 100px;
+  right: 40%;
+  transform: translateX(50%) rotate(90deg);
+  animation-delay: 1.5s;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
