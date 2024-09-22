@@ -36,6 +36,7 @@ body {
       #2f3040,
       #1f2020);
   font-family: var(--primary-font);
+  align-items: center;
 }
 * {
   box-sizing: border-box;
@@ -58,12 +59,15 @@ p {
 
 .hero-wrapper {
   height: 100svh;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 72px;
 }
 
+
+.hero-wrapper > * {
+  width: fit-content;
+}
 
 /* Hero Section */
 
@@ -88,6 +92,7 @@ p {
   background-color: var(--white);
   flex-direction: column;
   align-items: center;
+  margin-top: 96px;
 }
 
 .hero-logo img {
@@ -177,13 +182,14 @@ p {
 /* Scrolling Banner */
 
 .slider{
+  position: absolute;
   margin: 24px 0px;
   width: 100%;
   height: var(--height);
   overflow: hidden;
 }
 .discount-slider {
-  margin-bottom: 72px;
+  margin-bottom: 68px;
 }
 .text-slider {
   background-color: var(--light-grey);
@@ -242,7 +248,7 @@ p {
 .contact-wrapper {
   z-index: 0;
   width: 100%;
-  padding: 84px 72px;
+  padding: 96px 10px;
   display: flex;
   justify-content: center;
   background-color: var(--dark-grey);
@@ -251,7 +257,7 @@ p {
 .contact-contents {
   gap: 16px;
   display: flex;
-  max-width: 500px;
+  max-width: 600px;
   flex-direction: column;
 }
 
@@ -476,7 +482,7 @@ button:active .move-right {
 .hover-scale {
   transition: transform ease 0.5s;
   cursor: default;
-  z-index: 2;
+  z-index: 10 !important;
 }
 .hover-scale:hover {
   transform: scale(var(--scale,1.05));
