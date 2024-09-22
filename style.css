@@ -102,6 +102,8 @@ p {
 }
 
 .logo-text {
+  width: 80%;
+  height: auto;
   font-size: clamp(22px, 4vw, 26px);
   color: var(--dark-grey);
   font-family: var(--tertiary-font);
@@ -345,6 +347,11 @@ button {
   font-family: var(--secondary-font);
 }
 
+.contact-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-grey);
+}
+
 button svg {
   width: 24px;
   height: 24px;
@@ -360,13 +367,13 @@ button:hover img {
   /* filter: invert(100%) brightness(150%); */
 }
 
+
 .move-right {
   transition: transform 0.48s ease;
 }
-
 button:hover .move-right,
 button:active .move-right {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 
