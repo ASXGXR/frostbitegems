@@ -63,7 +63,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 68px;
-  padding: 64px;
+  padding: 48px;
   position: relative;
 }
 
@@ -77,9 +77,9 @@ p {
   height: auto;
   box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
 
-  gap: 8px;
+  gap: 6px;
   display: flex;
-  padding: 10px 18px;
+  padding: 10px 16px;
   background-color: #ffffffea;
   flex-direction: column;
   align-items: center;
