@@ -59,7 +59,7 @@ p {
 /* Hero Section */
 
 .hero-wrapper {
-  height: 74svh;
+  height: 64svh;
   display: flex;
   flex-direction: column;
   gap: 68px;
@@ -246,14 +246,14 @@ p {
 .contact-wrapper {
   z-index: 0;
   width: 100%;
-  padding: 96px 10px;
+  padding: 48px 10px;
   display: flex;
   justify-content: center;
   background-color: var(--dark-grey);
 }
 
 .contact-contents {
-  gap: 16px;
+  gap: 32px;
   display: flex;
   max-width: 600px;
   flex-direction: column;
@@ -311,11 +311,11 @@ p {
 
 button {
   font-family: var(--primary-font);
-  border-radius: var(--radius);
   padding: 16px 24px;
   font-size: clamp(16px, 2.7vmin, 20px);
   width: auto;
   position: relative;
+  border-radius: var(--radius);
   border: none;
   gap: 12px;
   cursor: pointer;
@@ -328,7 +328,7 @@ button {
 
 .book-btn {
   color: var(--dark-grey);
-  background-color: var(--white);
+  background-color: #ffffff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
