@@ -59,7 +59,7 @@ p {
 /* Hero Section */
 
 .hero-wrapper {
-  height: 64svh;
+  height: 72svh;
   display: flex;
   flex-direction: column;
   gap: 68px;
