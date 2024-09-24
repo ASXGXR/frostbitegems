@@ -56,6 +56,9 @@ h2 {
 p {
   margin: 0;
 }
+a {
+  all: unset;
+}
 
 
 /* Wrapper */
@@ -329,6 +332,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 32px;
+  padding-bottom: 64px;
 }
 
 .insta-title {
