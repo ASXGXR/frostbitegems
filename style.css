@@ -355,7 +355,7 @@ p {
   bottom: 8px;
   width: 280px;
   height: 38px;
-  background-color: #202122;
+  background-color: #25262C;
   z-index: 100000;
 }
 
@@ -574,7 +574,7 @@ button:active .move-right {
 .footer-logo {
   width: 240px;
   margin: 32px 0px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .footer-nav {
