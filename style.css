@@ -350,6 +350,15 @@ p {
   position: relative;
 }
 
+.overlay-rectangle-1 {
+  position: absolute;
+  top: 150px;
+  width: 89px;
+  height: 35px;
+  background-color: #404040;
+  z-index: 100000;
+}
+
 .overlay-rectangle {
   position: absolute;
   bottom: 8px;
@@ -359,6 +368,20 @@ p {
   z-index: 100000;
 }
 
+.follow-button {
+  background: #2586d5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.insta-follow {
+  filter: invert(100%);
+  width: 24px;
+}
 
 
 /* Buttons */
