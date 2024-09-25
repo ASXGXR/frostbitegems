@@ -361,7 +361,7 @@ a {
 .overlay-rectangle-1 {
   position: absolute;
   top: 150px;
-  width: 89px;
+  width: 90px;
   height: 35px;
   background-color: #404040;
   z-index: 100000;
