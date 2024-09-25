@@ -65,8 +65,12 @@ a {
 
 .section {
   padding: var(--section-padding);
+  flex-direction: column;
+  align-items: center;
   position: relative;
+  display: flex;
   width: 100%;
+  gap: 64px;
 }
 
 .hero-wrapper {
@@ -75,6 +79,7 @@ a {
   flex-direction: column;
   gap: 68px;
   padding: 0px var(--section-padding);
+  align-items: flex-start;
 }
 
 
@@ -326,13 +331,11 @@ a {
 /* Insta Widget */
 
 .insta-wrapper {
-  padding: 128px var(--section-padding);
+  padding: 100px var(--section-padding);
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  padding-bottom: 64px;
 }
 
 .insta-title {
@@ -572,6 +575,36 @@ button:active .move-right {
 .hover-scale:hover,
 .hover-scale:active {
   transform: scale(var(--scale,1.05));
+}
+
+
+
+/* Events Section */
+.subtitle {
+  font-size: 24px;
+  z-index: 1;
+}
+.subtitle:after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 2px; /* Adjust the height for the thickness of the line */
+  background-color: white;
+  margin: 5px auto 0; /* Centers the line */
+}
+.event {
+  max-width: 80%;
+  display: flex;
+  gap: 32px;
+}
+.event-img {
+  width: 100px;
+  height: 200px;
+  background: grey;
+  flex-shrink: 0;
+}
+.event1 {
+  transform: rotate(-15deg);
 }
 
 
