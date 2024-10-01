@@ -78,11 +78,14 @@ a {
   height: 100svh;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: clamp(24px, 24vmin, 120px);
   padding: var(--section-padding);
   align-items: flex-start;
+  justify-content: flex-end;
 }
-
+.book-btn {
+  margin-bottom: 96px;
+}
 
 .hero-wrapper > * {
   width: fit-content;
@@ -569,9 +572,6 @@ button:active .move-right {
   }
   .hero-wrapper {
     gap: 84px;
-  }
-  :root {
-    --section-padding: 24vw
   }
   .hero-wrapper {
     padding-top: 12vw;
