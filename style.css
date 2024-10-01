@@ -565,7 +565,7 @@ button:active .move-right {
     justify-content: flex-start;
   }
   :root {
-    --section-padding: 10vw;
+    --section-padding: 10vw 20vw;
   }
 }
 
