@@ -78,7 +78,7 @@ a {
   height: 100svh;
   display: flex;
   flex-direction: column;
-  gap: 68px;
+  gap: 72px;
   padding: var(--section-padding);
   align-items: flex-start;
 }
@@ -551,9 +551,9 @@ button:active .move-right {
   .sparklestar {
     display: none;
   }
-  /* .foil-bg {
+  .foil-bg {
     display: none;
-  } */
+  }
   .hero-logo {
     padding: 20px 36px;
   }
