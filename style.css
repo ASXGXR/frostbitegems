@@ -211,8 +211,9 @@ a {
 /* Scrolling Banner */
 
 .slider{
+  margin-top: 64px;
+  margin-bottom: -24px;
   width: 100vw;
-  margin: 16px 0px;
   height: var(--height);
   overflow: hidden;
 }
@@ -284,6 +285,7 @@ a {
   justify-content: center;
   position: relative;
   width: 100%;
+  gap: 0px;
 }
 
 .contact-bg {
