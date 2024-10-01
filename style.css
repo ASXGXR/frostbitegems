@@ -77,8 +77,11 @@ a {
 .hero-wrapper {
   height: 100svh;
   display: flex;
-  padding: 20% var(--section-padding);
+  padding: 25% var(--section-padding);
+  padding-top: 20%;
 }
+
+
 .hero-content {
   height: 100%;
   display: flex;
@@ -153,7 +156,7 @@ a {
 .text-and-rate {
   display: flex;
   flex-direction: column;
-  gap: 10vmin;
+  gap: 9vmin;
   z-index: 2;
 }
 
