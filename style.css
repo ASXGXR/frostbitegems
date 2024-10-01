@@ -157,7 +157,7 @@ a {
 }
 
 .hero-text {
-  font-size: max(24px,6vmin);
+  font-size: 6vmin;
   line-height: 110%;
   width: 47vmin;
   color: var(--white);
