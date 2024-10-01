@@ -115,6 +115,7 @@ a {
 
 .hero-logo-whole {
   width: min(400px,100%);
+  margin-top: 24px;
   height: auto;
 }
 
