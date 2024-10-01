@@ -212,7 +212,6 @@ a {
 /* Scrolling Banner */
 
 .slider{
-  margin-top: 64px;
   margin-bottom: -24px;
   width: 100vw;
   height: var(--height);
@@ -227,6 +226,7 @@ a {
   font-family: var(--secondary-font);
 }
 .text-slider-bigger {
+  margin-top: 64px;
   font-size: 40px;
   color: var(--white);
   background-color: transparent;
@@ -571,7 +571,10 @@ button:active .move-right {
     gap: 84px;
   }
   :root {
-    --section-padding: 32vw
+    --section-padding: 24vw
+  }
+  .hero-wrapper {
+    padding-top: 12vw;
   }
 }
 
