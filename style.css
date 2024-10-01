@@ -77,11 +77,18 @@ a {
 .hero-wrapper {
   height: 100svh;
   display: flex;
-  flex-direction: column;
-  gap: clamp(24px, 21vmin, 120px);
   padding: var(--section-padding);
   align-items: flex-start;
   justify-content: flex-end;
+}
+.hero-content {
+  height: 83.6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-content > * {
+  width: fit-content;
 }
 .book-btn {
   margin-bottom: 8.2vh;
@@ -160,9 +167,9 @@ a {
 }
 
 .hero-text {
-  font-size: max(22px,5vmin);
+  font-size: max(24px,6vmin);
   line-height: 110%;
-  width: 39vmin;
+  width: 47vmin;
   color: var(--white);
   cursor: default;
 }
@@ -491,7 +498,7 @@ button:active .move-right {
   position: absolute;
   color: rgb(187, 187, 187);
   animation: sparkle var(--sparkle-dur) infinite ease-in-out;
-  font-size: 14px;
+  font-size: 3vmin;
 }
 
 .sparklestar:before {
@@ -525,7 +532,7 @@ button:active .move-right {
 
 .star-4 {
   color: #AEE1CD;
-  right: 0%;
+  right: -10%;
   bottom: 5%;
   transform: rotate(90deg);
   animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
