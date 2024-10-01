@@ -75,7 +75,7 @@ a {
 }
 
 .hero-wrapper {
-  height: 100lvh;
+  height: 100svh;
   display: flex;
   padding: 30% var(--section-padding);
 }
