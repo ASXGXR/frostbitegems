@@ -75,7 +75,7 @@ a {
 }
 
 .hero-wrapper {
-  height: 100svh;
+  height: 100vh;
   display: flex;
   padding: var(--section-padding);
   align-items: flex-start;
@@ -89,9 +89,6 @@ a {
 }
 .hero-content > * {
   width: fit-content;
-}
-.book-btn {
-  margin-bottom: 8.2vh;
 }
 
 .hero-wrapper > * {
@@ -158,7 +155,7 @@ a {
 .text-and-rate {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 11vmin;
   z-index: 2;
 }
 
@@ -557,9 +554,6 @@ button:active .move-right {
 /* Larger Screens (Laptop) */
 
 @media (min-width: 768px) {
-  .sparklestar {
-    display: none;
-  }
   .foil-bg {
     display: none;
   }
@@ -576,6 +570,9 @@ button:active .move-right {
     gap: 84px;
     padding-top: 14vmin;
     justify-content: flex-start;
+  }
+  :root {
+    --section-padding: 10vw;
   }
 }
 
