@@ -22,7 +22,7 @@
   --slider-bg: #CECECF;
   --light-grey: #E3E3E7;
   --dark-grey: #141c30;
-  --section-padding: 13vw;
+  --section-padding: 12vmin;
 }
 
 
@@ -77,7 +77,7 @@ a {
 .hero-wrapper {
   height: 100svh;
   display: flex;
-  padding: 30% var(--section-padding);
+  padding: 20% var(--section-padding);
 }
 .hero-content {
   height: 100%;
@@ -157,7 +157,7 @@ a {
 .hero-text {
   font-size: 6vmin;
   line-height: 110%;
-  width: 48vmin;
+  width: 50vmin;
   color: var(--white);
   cursor: default;
 }
@@ -520,7 +520,7 @@ button:active .move-right {
 
 .star-4 {
   color: #AEE1CD;
-  right: -10%;
+  right: -3%;
   bottom: 5%;
   transform: rotate(90deg);
   animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
