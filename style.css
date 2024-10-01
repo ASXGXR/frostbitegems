@@ -496,7 +496,7 @@ button:active .move-right {
   position: absolute;
   color: rgb(187, 187, 187);
   animation: sparkle var(--sparkle-dur) infinite ease-in-out;
-  font-size: 3vmin;
+  font-size: min(4vmin,20px);
 }
 
 .sparklestar:before {
@@ -568,11 +568,7 @@ button:active .move-right {
     flex-direction: row;
   }
   .hero-wrapper {
-    gap: 84px;
-    justify-content: flex-start;
-  }
-  :root {
-    --section-padding: 10vw 20vw;
+    padding: 6% 24%;
   }
 }
 
