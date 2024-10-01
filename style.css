@@ -118,7 +118,6 @@ a {
 
 .hero-logo-whole {
   width: min(400px,100%);
-  margin-top: 24px;
   height: auto;
 }
 
@@ -161,9 +160,9 @@ a {
 }
 
 .hero-text {
-  font-size: 26px;
+  font-size: max(22px,5vmin);
   line-height: 110%;
-  width: 230px;
+  width: 39vmin;
   color: var(--white);
   cursor: default;
 }
@@ -409,7 +408,7 @@ button {
   font-family: var(--primary-font);
   border-radius: var(--radius);
   padding: 16px 24px;
-  font-size: clamp(16px, 2.7vmin, 20px);
+  font-size: clamp(16px, 2.9vmin, 20px);
   width: auto;
   position: relative;
   border: none;
@@ -526,7 +525,7 @@ button:active .move-right {
 
 .star-4 {
   color: #AEE1CD;
-  right: 4%;
+  right: 0%;
   bottom: 5%;
   transform: rotate(90deg);
   animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
@@ -560,10 +559,6 @@ button:active .move-right {
   .hero-logo {
     padding: 20px 36px;
   }
-  .hero-text {
-    font-size: 36px;
-    width: 340px;
-  }
   .hero-section {
     width: 75vw;
   }
@@ -572,9 +567,8 @@ button:active .move-right {
   }
   .hero-wrapper {
     gap: 84px;
-  }
-  .hero-wrapper {
-    padding-top: 12vw;
+    padding-top: 14vmin;
+    justify-content: flex-start;
   }
 }
 
