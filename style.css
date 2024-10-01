@@ -77,7 +77,7 @@ a {
 .hero-wrapper {
   height: 100vh;
   display: flex;
-  padding: 15vh var(--section-padding);
+  padding: 30% var(--section-padding);
 }
 .hero-content {
   height: 100%;
