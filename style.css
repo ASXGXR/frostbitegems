@@ -152,13 +152,6 @@ a {
 
 /* Text + Rate */
 
-.text-and-rate {
-  display: flex;
-  flex-direction: column;
-  gap: 11vmin;
-  z-index: 2;
-}
-
 .hero-text-wrapper {
   position: relative;
 }
