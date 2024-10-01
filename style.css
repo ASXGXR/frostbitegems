@@ -222,6 +222,7 @@ a {
   overflow: hidden;
 }
 .text-slider {
+  margin-top: 64px;
   z-index: 1;
   cursor: default;
   font-size: 16px;
@@ -230,7 +231,6 @@ a {
   font-family: var(--secondary-font);
 }
 .text-slider-bigger {
-  margin-top: 64px;
   font-size: 40px;
   color: var(--white);
   background-color: transparent;
