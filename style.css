@@ -79,7 +79,7 @@ a {
   display: flex;
   padding: var(--section-padding);
   padding-bottom: 30%;
-  padding-top: 20%;
+  padding-top: 22%;
 }
 
 
@@ -219,7 +219,7 @@ a {
 
 /* Scrolling Banner */
 
-.slider{
+.slider {
   margin-bottom: -24px;
   width: 100vw;
   height: var(--height);
@@ -229,9 +229,9 @@ a {
   margin-top: 64px;
   z-index: 1;
   cursor: default;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--dark-grey);
-  background-color: var(--slider-bg);
+  background-color: var(--white);
   font-family: var(--secondary-font);
 }
 .text-slider-bigger {
@@ -269,7 +269,7 @@ a {
 .slider:hover .item{
   animation-play-state: paused!important;
 }
-.text-slider-bigger:hover .item{
+.no-stop:hover .item{
   animation-play-state: running!important; /* This will cancel out the first one */
 }
 .slider[reverse="true"] .item{
@@ -674,4 +674,55 @@ button:active .move-right {
   opacity: 0.7;
   font-size: 12px;
   color: var(--white);
+}
+
+
+
+/* Image Slider */
+.image-slider {
+  position: absolute;
+  --width: 300px;
+  --height: 100px;
+  opacity: 0.8;
+}
+.image-slider .list .item {
+  width: 100px;
+  filter: brightness(150%);
+}
+.is1 .list .item {
+  height: 110px;
+  width: 110px;
+  animation-delay: 0s !important;
+}
+.is1 {
+  rotate: 20deg;
+  height: 110px;
+  bottom: 50%;
+}
+.is2 .list .item {
+  height: 90px;
+  width: 90px;
+  animation-delay: 3s !important;
+}
+.is2 {
+  height: 90px;
+  rotate: -15deg;
+  bottom: 75%;
+}
+.is3 .list .item {
+  animation-delay: 6s !important;
+}
+.is3 {
+  rotate: 12deg;
+  bottom: 25%;
+}
+.is4 .list .item {
+  height: 90px;
+  width: 90px;
+  animation-delay: 9s !important;
+}
+.is4 {
+  rotate: -var(--primary-font);
+  height: 90x;
+  bottom: 50%;
 }
