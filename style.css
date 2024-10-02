@@ -759,7 +759,8 @@ button:active .move-right {
   height: 100%;
   max-width: 32vw;
   object-fit: cover;
-  margin: 0 8px;
+  margin: 0 4px;
+  border-radius: 4px;
 }
 .slider-new .buttons{
   opacity: 0.8;
