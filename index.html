@@ -80,7 +80,7 @@
       <!-- Show Your Smile Img -->
       <img class="show-smile hover-scale unselectable" style="--scale: 1;" src="images/show-your-smile.png"/>
 
-      <h2 class="subtitle no-split">OUR CLIENTS</h2>
+      <h2 class="subtitle no-split">CLIENT FAVES</h2>
       
       <!-- Image Carousel - Amended by JS -->
       <div class="carousel-wrapper">
@@ -144,7 +144,7 @@
   <div class="section insta-wrapper">
 
     <!-- Title -->
-    <h2 class="subtitle no-split">CONNECT WITH US</h2>
+    <h2 class="subtitle no-split">CONNECT WITH US!</h2>
 
     <!-- Instagram Widget -->
     <div class="widget-wrapper unselectable">
@@ -167,7 +167,7 @@
   <div class="section events-wrapper">
     <div class="contact-bg events-bg"></div>
     <!-- Title -->
-    <h2 class="subtitle">RECENT EVENTS</h2>
+    <h2 class="subtitle">WHAT'S NEW?</h2>
 
     <!-- EVENTS -->
     <div class="event">
@@ -298,13 +298,13 @@
             reloadSlider();
           }
 
-          let refreshInterval = setInterval(() => { next.click() }, 2500);
+          let refreshInterval = setInterval(() => { next.click() }, 2000);
 
           function reloadSlider() {
             slider.style.left = -items[active].offsetLeft + 'px';
 
             clearInterval(refreshInterval);
-            refreshInterval = setInterval(() => { next.click() }, 2500);
+            refreshInterval = setInterval(() => { next.click() }, 2000);
           }
 
           window.onresize = function(event) {
