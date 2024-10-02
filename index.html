@@ -273,14 +273,14 @@
               reloadSlider();
           }
 
-          let refreshInterval = setInterval(()=> {next.click()}, 3000);
+          let refreshInterval = setInterval(()=> {next.click()}, 2500);
 
           function reloadSlider(){
               slider.style.left = -items[active].offsetLeft + 'px';
 
 
               clearInterval(refreshInterval);
-              refreshInterval = setInterval(()=> {next.click()}, 3000);
+              refreshInterval = setInterval(()=> {next.click()}, 2500);
           }
 
           window.onresize = function(event) {
