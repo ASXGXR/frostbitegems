@@ -447,16 +447,6 @@ button svg {
   margin-bottom: 2px;
 }
 
-button:hover {
-  /* color: var(--white);
-  background-color: #00a6ff; */
-  /* box-shadow: none; */
-}
-button:hover img {
-  /* filter: invert(100%) brightness(150%); */
-}
-
-
 .move-right {
   transition: transform 0.48s ease;
 }
