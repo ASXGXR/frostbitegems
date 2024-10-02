@@ -304,6 +304,21 @@
   </script>
 
 
+  <!-- Viewport Height (Mobile) -->
+  <script>
+    // Set a CSS variable for actual viewport height
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // Update the value when the window resizes (e.g., when the address bar hides)
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
+
+
+
 </body>
 
 </html>
