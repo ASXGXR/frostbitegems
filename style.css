@@ -828,6 +828,7 @@ button:active .move-right {
   width: 40px;
   height: auto;
   opacity: 0.6;
+  display: none;
 }
 
 .shine-1 {
