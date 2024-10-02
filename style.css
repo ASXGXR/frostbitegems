@@ -173,7 +173,6 @@ a {
 .hero-text {
   font-size: 6vmin;
   line-height: 110%;
-  width: 50vmin;
   color: var(--white);
   cursor: default;
 }
@@ -529,7 +528,7 @@ button:active .move-right {
 
 .star-4 {
   color: #AEE1CD;
-  right: -3%;
+  right: -10%;
   bottom: 5%;
   transform: rotate(90deg);
   animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
