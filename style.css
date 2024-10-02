@@ -590,7 +590,7 @@ button:active .move-right {
   margin: 0;
   z-index: 2;
   margin-bottom: -20px;
-  font-size: 4.7vmin;
+  font-size: 5vmin;
   color: var(--white);
   font-family: var(--tertiary-font);
   transform: rotate(2deg);
@@ -853,4 +853,14 @@ button:active .move-right {
   width: 100%;
   border-radius: 0;
   margin-left: 0;
+}
+
+
+
+.events {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 120px;
 }
