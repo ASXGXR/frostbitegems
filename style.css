@@ -223,13 +223,12 @@ a {
 /* Scrolling Banner */
 
 .slider {
-  margin-bottom: -24px;
   width: 100vw;
   height: var(--height);
   overflow: hidden;
 }
 .text-slider {
-  margin-top: 64px;
+  margin-left: -16%; /* Keeps on the page */
   z-index: 1;
   cursor: default;
   font-size: 18px;
@@ -314,7 +313,7 @@ a {
 
 .contact-contents {
   width: 100%;
-  gap: 16px;
+  gap: 48px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -732,7 +731,6 @@ button:active .move-right {
 
 
 .slider-new{
-  margin: 32px 0px;
   width: 100%;
   height: 200px;
   position: relative;
