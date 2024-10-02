@@ -793,5 +793,12 @@ button:active .move-right {
   }
   .event {
     flex-direction: row;
+    margin-top: 13%;
+  }
+  .event h3 {
+    margin-top: 16%;
+    position: absolute;
+    top: 0;
+    left: 36%;
   }
 }
