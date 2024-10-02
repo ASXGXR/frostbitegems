@@ -300,6 +300,7 @@ a {
   position: relative;
   width: 100%;
   gap: 0px;
+  overflow: hidden;
 }
 
 .contact-bg {
@@ -742,7 +743,7 @@ button:active .move-right {
   height: 25vh;
   position: relative;
   overflow: hidden;
-  margin-left: -16%;
+  margin-left: -15%;
 }
 .slider-new .list{
   position: absolute;
@@ -813,8 +814,11 @@ button:active .move-right {
   .event h3 {
     margin-top: 16%;
     position: absolute;
-    top: 0;
-    left: 36%;
+    top: -94%;
+    left: 28%;
+  }
+  .event {
+    position: relative;
   }
 }
 

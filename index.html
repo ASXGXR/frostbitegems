@@ -319,28 +319,27 @@
           // Initialize slider position
           slider.style.left = '0px';
 
-          next.onclick = function() {
-            // Reset even earlier, before reaching the last or second-to-last item
-            active = active + 1 < lengthItems - 2 ? active + 1 : 0;
-            reloadSlider();
+          next.onclick = function(){
+              active = active + 1 <= lengthItems ? active + 1 : 0;
+              reloadSlider();
           }
-          
-          prev.onclick = function() {
-            active = active - 1 >= 0 ? active - 1 : lengthItems;
-            reloadSlider();
+          prev.onclick = function(){
+              active = active - 1 >= 0 ? active - 1 : lengthItems;
+              reloadSlider();
           }
 
-          let refreshInterval = setInterval(() => { next.click() }, 2000);
+          let refreshInterval = setInterval(()=> {next.click()}, 2500);
 
-          function reloadSlider() {
-            slider.style.left = -items[active].offsetLeft + 'px';
+          function reloadSlider(){
+              slider.style.left = -items[active].offsetLeft + 'px';
 
-            clearInterval(refreshInterval);
-            refreshInterval = setInterval(() => { next.click() }, 2000);
+
+              clearInterval(refreshInterval);
+              refreshInterval = setInterval(()=> {next.click()}, 2500);
           }
 
           window.onresize = function(event) {
-            reloadSlider();
+              reloadSlider();
           };
 
           // Adjust slider on initialization
