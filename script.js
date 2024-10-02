@@ -1,5 +1,5 @@
 // Star Mouse Trail
-const starSize = 0.6; // Star scale
+const starSize = 0.7; // Star scale
 function mouseTrail() {
     let x1 = 0, y1 = 0;
     const dist_to_draw = 50, delay = 1000;

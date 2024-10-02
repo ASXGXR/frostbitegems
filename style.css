@@ -595,7 +595,7 @@ button:active .move-right {
   transform: rotate(2deg);
 }
 .event p {
-  width: 110%;
+  width: 80vw;
   z-index: 2;
   text-align: center;
 }
