@@ -683,7 +683,7 @@ button:active .move-right {
 .image-slider .list .item {
   width: 100px;
   border-radius: 50px;
-  filter: brightness(150%);
+  filter: brightness(145%);
 }
 .is1 .list .item {
   height: 110px;
