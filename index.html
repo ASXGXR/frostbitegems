@@ -280,8 +280,8 @@
           slider.style.left = '0px';
 
           next.onclick = function() {
-            // Reset slightly earlier, before reaching the last item
-            active = active + 1 < lengthItems ? active + 1 : 0;
+            // Reset even earlier, before reaching the last or second-to-last item
+            active = active + 1 < lengthItems - 2 ? active + 1 : 0;
             reloadSlider();
           }
           
@@ -306,6 +306,7 @@
           // Adjust slider on initialization
           reloadSlider();
         }
+
 
       });
     })();
