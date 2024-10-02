@@ -678,7 +678,7 @@ button:active .move-right {
 
 
 
-/* Image Slider */
+/* Image Sliders */
 .image-slider {
   position: absolute;
   --width: 300px;
@@ -687,6 +687,7 @@ button:active .move-right {
 }
 .image-slider .list .item {
   width: 100px;
+  border-radius: 50px;
   filter: brightness(150%);
 }
 .is1 .list .item {
@@ -706,23 +707,27 @@ button:active .move-right {
 }
 .is2 {
   height: 90px;
-  rotate: -15deg;
   bottom: 75%;
+  z-index: 1000;
+  opacity: 1;
+  rotate: -5deg;
 }
 .is3 .list .item {
-  animation-delay: 6s !important;
+  animation-delay: 5s !important;
 }
 .is3 {
-  rotate: 12deg;
   bottom: 25%;
+  rotate: 10deg
 }
 .is4 .list .item {
   height: 90px;
   width: 90px;
-  animation-delay: 9s !important;
+  animation-delay: 8s !important;
 }
 .is4 {
-  rotate: -var(--primary-font);
+  z-index: 1000;
+  opacity: 1;
+  rotate: -20deg;
   height: 90x;
   bottom: 50%;
 }
