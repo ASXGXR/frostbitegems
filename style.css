@@ -191,6 +191,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  filter: brightness(105%) saturate(110%);
 }
 
 .review-icons {
@@ -429,6 +430,9 @@ button {
   justify-content: center;
   transition: color ease 0.4s, background-color ease 0.4s, box-shadow ease 0.4s;
   z-index: 100 !important;
+}
+a {
+  cursor: pointer !important;
 }
 
 .book-btn {
