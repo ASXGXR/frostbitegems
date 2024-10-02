@@ -40,6 +40,7 @@ body {
       #2f3040,
       #1f2020);
   font-family: var(--primary-font);
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -299,11 +300,14 @@ a {
 
 .contact-bg {
   position: absolute;
-  background: linear-gradient(to bottom, var(--dark-grey), transparent);
+  background: linear-gradient(to bottom, var(--dark-grey), #00439564);
   width: 100%;
   height: 100%;
   z-index: 0;
   top: 0;
+}
+.events-bg {
+  background: linear-gradient(to bottom, var(--dark-grey), transparent);
 }
 
 .contact-contents {
@@ -557,6 +561,7 @@ button:active .move-right {
   }
   .contact-contents {
     flex-direction: row;
+    width: 50%;
   }
   .hero-wrapper {
     padding: 6% 24%;
@@ -720,4 +725,48 @@ button:active .move-right {
   rotate: -20deg;
   height: 90x;
   bottom: 50%;
+}
+
+
+
+.slider-new{
+  margin: 32px 0px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.slider-new .list{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider-new .list img{
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-new .buttons{
+  opacity: 0.7;
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-new .buttons button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
 }

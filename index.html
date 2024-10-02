@@ -76,65 +76,57 @@
   <div class="section contact-wrapper">
     <div class="contact-bg"></div> 
     <div class="contact-contents">
+      
+      <!-- Show Your Smile Img -->
       <img class="hover-scale unselectable" style="--scale: 1;" src="images/show-your-smile.png"/>
+      
+      <!-- Image Carousel - Amended by JS -->
+      <div class="slider-new">
+        <div class="list">
+        </div>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+      </div>
+
+      <!-- Button -->
       <button class="contact-btn hover-scale" style="--scale: 1.04;">
         GET IN TOUCH
         <p class="move-right no-split">-></p>
       </button>
     </div>
 
-
     <!-- Image Sliders -->
-     <!-- 1 -->
-    <div class="no-stop slider image-slider is1">
-      <div class="list">
-        <img class="item" src="images/carousel/1.png">
+    <!-- <div class="image-sliders">
+      <div class="no-stop slider image-slider is1">
+        <div class="list">
+          <img class="item" src="images/carousel/1.png">
+        </div>
       </div>
-    </div>
-    <!-- 2 -->
-    <div class="no-stop slider image-slider is2">
-      <div class="list">
-        <img class="item" src="images/carousel/2.png">
+      <div class="no-stop slider image-slider is2">
+        <div class="list">
+          <img class="item" src="images/carousel/2.png">
+        </div>
       </div>
-    </div>
-    <!-- 3 -->
-    <div class="no-stop slider image-slider is3">
-      <div class="list">
-        <img class="item" src="images/carousel/3.png">
+      <div class="no-stop slider image-slider is3">
+        <div class="list">
+          <img class="item" src="images/carousel/3.png">
+        </div>
       </div>
-    </div>
-    <!-- 4 -->
-    <div class="no-stop slider image-slider is4">
-      <div class="list">
-        <img class="item" src="images/carousel/4.png">
-      </div>
-    </div>
-
-
-
-    <!-- Discount Slider -->
-    <!-- <div class="slider text-slider discount-slider" style="--width: 240px;--height: 32px;--quantity: 2;"> -->
-    <!-- <div class="slider text-slider discount-slider text-slider-bigger no-stop" style="--width: 520px;--height: 64px;--quantity: 2;">
-      <div class="list">
-        <div class="item" style="--position: 1">20% OFF FOR UNI BABES</div>
-        <div class="item" style="--position: 2">20% OFF FOR UNI BABES</div>
-        <div class="item" style="--position: 3">20% OFF FOR UNI BABES</div>
+      <div class="no-stop slider image-slider is4">
+        <div class="list">
+          <img class="item" src="images/carousel/4.png">
+        </div>
       </div>
     </div> -->
 
-    <!-- Discount Slider -->
-    <!-- <div class="slider text-slider discount-slider" style="--width: 240px;--height: 36px;--quantity: 2;">
-      <div class="list">
-        <div class="item" style="--position: 1">15% OFF FOR UNI BABES</div>
-        <div class="item" style="--position: 2">15% OFF FOR UNI BABES</div>
-        <div class="item" style="--position: 3">15% OFF FOR UNI BABES</div>
-      </div>
-    </div> -->
   </div>
 
   <!-- Instagram Section -->
   <div class="section insta-wrapper">
-    <h2 class="subtitle no-split">FOLLOW THE SOCIALS</h2>
+    <div class="contact-bg"></div>
+    <h2 class="subtitle no-split">SOCIALS</h2>
     <!-- Foil -->
     <img class="foil-bg reverse-foil unselectable" src="foil-background.png"/>
     <!-- Instagram Widget -->
@@ -154,7 +146,7 @@
 
   <!-- Recent Events -->
   <div class="section events-wrapper">
-    <div class="contact-bg"></div>
+    <div class="contact-bg events-bg"></div>
     <!-- Title -->
     <h2 class="subtitle">RECENT EVENTS</h2>
     <div class="event">
@@ -204,7 +196,92 @@
 
     <!-- Foil -->
     <img class="foil-bg unselectable" src="foil-background.png"/>
-  </footer>  
+  </footer>
+
+
+  <!-- IMAGE CAROUSEL -->
+  <script>
+    (function() {
+      // Wait for the DOM content to load
+      document.addEventListener('DOMContentLoaded', function() {
+        let i = 1; // Start with the first image
+        const listElement = document.querySelector('.slider-new .list');
+
+        function loadImage(index) {
+          const img = new Image();
+          img.src = `images/carousel/${index}.png`;
+
+          img.onload = function() {
+            // Create the item div and append the image
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.appendChild(img);
+
+            // Append the item to the list
+            listElement.appendChild(itemDiv);
+
+            // Load the next image
+            loadImage(index + 1);
+          };
+
+          img.onerror = function() {
+            // No more images, initialize the slider
+            if (index > 1) {
+              console.log(`Loaded ${index - 1} images.`);
+              imageSlider(); // Initialize the slider here
+            } else {
+              console.error('No images were loaded.');
+            }
+          };
+        }
+
+        // Start loading images
+        loadImage(i);
+
+        // Image Slider
+        function imageSlider() {
+          let slider = document.querySelector('.slider-new .list');
+          let items = document.querySelectorAll('.slider-new .list .item');
+          let next = document.getElementById('next');
+          let prev = document.getElementById('prev');
+
+          let lengthItems = items.length - 1;
+          let active = 0;
+
+          // Initialize slider position
+          slider.style.left = '0px';
+
+          next.onclick = function(){
+              active = active + 1 <= lengthItems ? active + 1 : 0;
+              reloadSlider();
+          }
+          prev.onclick = function(){
+              active = active - 1 >= 0 ? active - 1 : lengthItems;
+              reloadSlider();
+          }
+
+          let refreshInterval = setInterval(()=> {next.click()}, 3000);
+
+          function reloadSlider(){
+              slider.style.left = -items[active].offsetLeft + 'px';
+
+
+              clearInterval(refreshInterval);
+              refreshInterval = setInterval(()=> {next.click()}, 3000);
+          }
+
+          window.onresize = function(event) {
+              reloadSlider();
+          };
+
+          // Adjust slider on initialization
+          reloadSlider();
+        }
+
+      });
+    })();
+  </script>
+
 
 </body>
 
