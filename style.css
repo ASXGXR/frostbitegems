@@ -318,7 +318,7 @@ a {
   flex-direction: column;
 }
 
-.contact-contents img {
+.show-smile {
   width: 100%;
 }
 
@@ -748,7 +748,7 @@ button:active .move-right {
   opacity: 0.9;
   filter: brightness(140%);
   height: 100%;
-  max-width: 20vw;
+  max-width: 202w;
   object-fit: cover;
 }
 .slider-new .buttons{
@@ -805,4 +805,32 @@ button:active .move-right {
     top: 0;
     left: 36%;
   }
+}
+
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+
+.shine {
+  position: absolute;
+  z-index: 5;
+  width: 40px;
+  height: auto;
+  opacity: 0.6;
+}
+
+.shine-1 {
+  top: -15%;
+  right: -11%;
+  rotate: 20deg;
+}
+.shine-2 {
+  bottom: -16%;
+  left: -12%;
+  rotate: 200deg;
+  opacity: 0.5;
+  display: none;
 }
