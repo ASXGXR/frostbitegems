@@ -387,7 +387,7 @@ a {
 
 .overlay-rectangle {
   position: absolute;
-  bottom: -4px;
+  bottom: 2px;
   width: 280px;
   height: 44px;
   background-color: #25262C;
