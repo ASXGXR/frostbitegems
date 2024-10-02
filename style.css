@@ -753,12 +753,13 @@ button:active .move-right {
   display: flex;
   transition: 1s;
 }
-.slider-new .list img{
+.slider-new .list img {
   opacity: 0.9;
   filter: brightness(140%) grayscale(20%) saturate(120%);
   height: 100%;
   max-width: 32vw;
   object-fit: cover;
+  margin: 0 8px;
 }
 .slider-new .buttons{
   opacity: 0.8;
