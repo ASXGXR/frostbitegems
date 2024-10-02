@@ -748,7 +748,7 @@ button:active .move-right {
   opacity: 0.9;
   filter: brightness(140%);
   height: 100%;
-  max-width: 202w;
+  max-width: 22w;
   object-fit: cover;
 }
 .slider-new .buttons{
