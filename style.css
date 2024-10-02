@@ -391,7 +391,7 @@ a {
   width: 280px;
   height: 44px;
   background-color: #25262C;
-  z-index: 100000;
+  z-index: 100000 !important;
 }
 
 .follow-button {
