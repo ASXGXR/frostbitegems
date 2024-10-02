@@ -745,7 +745,7 @@ button:active .move-right {
 }
 .slider-new .list img{
   height: 100%;
-  max-width: 40vw;
+  max-width: 30vw;
   object-fit: cover;
 }
 .slider-new .buttons{
