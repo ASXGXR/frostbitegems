@@ -745,6 +745,8 @@ button:active .move-right {
   transition: 1s;
 }
 .slider-new .list img{
+  opacity: 0.9;
+  filter: brightness(140%);
   height: 100%;
   max-width: 20vw;
   object-fit: cover;
