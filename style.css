@@ -565,6 +565,7 @@ button:active .move-right {
 /* Events Section */
 .subtitle {
   font-size: 24px;
+  margin: 0 auto;
   z-index: 1;
 }
 .subtitle:after {
