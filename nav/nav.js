@@ -13,7 +13,6 @@ fetch('nav/nav.html')
   if (window.location.pathname !== '/') {
     navButtons.insertAdjacentHTML('afterbegin', `
       <a href="/" class="nav-btn english-txt">HOME</a>
-      <a href="/" class="nav-btn thai-txt">หน้าหลัก</a>
     `);
   }
 
