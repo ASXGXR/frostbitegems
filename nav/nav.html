@@ -1,28 +1,13 @@
 <!-- nav.html -->
 <nav id="nav">
-  <a href="/" class="nav-logo nav-btn">
-    <img src="images/logo.svg" alt="Bangkok Rent A Car Logo">
-    <p class="logo-text">bangkokrentacar.com</p>
-  </a>
 
   <!-- PAGE BUTTONS -->
   <div class="nav-buttons">
-    <button class="nav-btn nav-special english-txt" onclick="scrollToCars();">CARS</button>
-    <button class="nav-btn nav-special thai-txt" onclick="scrollToCars();">รถยนต์</button>
 
-    <button class="nav-btn nav-special english-txt" data-page="vans.html">VANS</button>
-    <button class="nav-btn nav-special thai-txt" data-page="vans.html">รถตู้</button>
+    <button class="nav-btn" data-page="about.html">BOOK-IN ></button>
+    <a href="terms.html" class="nav-btn">TERMS</a>
+    <button class="nav-btn" data-page="about.html">ABOUT</button>
 
-    <a href="terms.html" class="nav-btn english-txt">TERMS</a>
-    <a href="terms.html" class="nav-btn thai-txt">ข้อกำหนด</a>
-
-    <button class="nav-btn english-txt" data-page="about.html">ABOUT</button>
-    <button class="nav-btn thai-txt" data-page="about.html">เกี่ยวกับเรา</button>
-
-    <a class="nav-btn" href="https://line.me/R/ti/p/@bangkokrentacar" target="_blank">
-      <img class="line-logo-nav english-txt" src="images/line-logo.svg">
-      <img class="line-logo-nav thai-txt" src="images/line-logo.svg">
-    </a>
   </div>
 
   <!-- Hamburger icon -->
@@ -36,7 +21,8 @@
 <style>
 
   :root {
-    --nav-height: 112px;
+    --nav-height: 80px;
+    --bg-color: var(--page-bg);
   }
 
   nav {
@@ -54,7 +40,7 @@
     --nav-height: 123px;
     transition: top 0.4s;
     /* background: linear-gradient(to bottom, var(--white) 35%, transparent); */
-    background: linear-gradient(to bottom, var(--white) 75%, transparent);
+    background: linear-gradient(to bottom, var(--page-bg) 75%, transparent);
   }
   
   .line-logo-nav {
