@@ -10,11 +10,11 @@ fetch('nav/nav.html')
   const navButtons = navbarElement.querySelector('.nav-buttons');
 
   // Check if not on the main page
-  if (window.location.pathname !== '/') {
-    navButtons.insertAdjacentHTML('afterbegin', `
-      <a href="/" class="nav-btn english-txt">HOME</a>
-    `);
-  }
+  // if (window.location.pathname !== '/') {
+  //   navButtons.insertAdjacentHTML('afterbegin', `
+  //     <a href="/" class="nav-btn english-txt">HOME</a>
+  //   `);
+  // }
 
   // Highlight current page's nav item
   const currentPath = window.location.pathname;
