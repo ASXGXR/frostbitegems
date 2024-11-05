@@ -14,15 +14,15 @@
   <div class="hamburger">
     <span></span>
     <span></span>
-    <span></span>
   </div>
 </nav>
 
 <style>
 
   :root {
-    --nav-height: 80px;
+    --nav-height: 100px;
     --bg-color: var(--page-bg);
+    --hamburger-color: var(--white);
   }
 
   nav {
@@ -37,7 +37,6 @@
     top: 0;
     z-index: 10;
     position: fixed;
-    --nav-height: 123px;
     transition: top 0.4s;
     /* background: linear-gradient(to bottom, var(--white) 35%, transparent); */
     background: linear-gradient(to bottom, var(--page-bg) 75%, transparent);
@@ -122,17 +121,22 @@
 
   /* Hamburger styles */
   .hamburger {
+    margin-left: auto;
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    gap: 8px;
+    transition: transform 0.6s ease;
+  }
+  .hamburger:hover {
+    transform: scale(1.2);
   }
 
   .hamburger span {
     width: 30px;
-    height: 3px;
-    background-color: #000;
-    border-radius: 2px;
+    height: 2px;
+    background-color: var(--hamburger-color);
+    border-radius: 1px;
   }
 
   .dark-mode {
