@@ -550,7 +550,7 @@ button:active .move-right {
   50% {
     opacity: 0.8;
     transform: rotate(180deg) scale(1.2);
-    filter: blur(0px); /* No blur */
+    filter: blur(0.2px); /* Lower blur */
   }
 }
 
