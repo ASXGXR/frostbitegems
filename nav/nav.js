@@ -1,6 +1,7 @@
 // nav.js
 
-// Adding Nav
+
+// ADDS NAV BAR
 const navbarElement = document.getElementById('navbar');
 fetch('nav/nav.html')
 .then(response => response.text())
@@ -10,43 +11,31 @@ fetch('nav/nav.html')
   const navButtons = navbarElement.querySelector('.nav-buttons');
 
   // Check if not on the main page
-  // if (window.location.pathname !== '/') {
-  //   navButtons.insertAdjacentHTML('afterbegin', `
-  //     <a href="/" class="nav-btn english-txt">HOME</a>
-  //   `);
-  // }
+  if (window.location.pathname !== '/') {
+    navButtons.insertAdjacentHTML('afterbegin', `
+      <a href="/" class="nav-btn english-txt">HOME</a>
+    `);
+  }
 
-  // Highlight current page's nav item
+
+
+  // HIGHLIGHT PAGE USER IS ON
   const currentPath = window.location.pathname;
-
-  // For all nav buttons (both <a> and <button> elements)
   const navItems = navButtons.querySelectorAll('.nav-btn');
-
   navItems.forEach(navItem => {
-    let itemPath = null;
+    let itemPath = navItem.tagName.toLowerCase() === 'a' ? navItem.getAttribute('href') : null;
 
-    if (navItem.tagName.toLowerCase() === 'a') {
-      itemPath = navItem.getAttribute('href');
-    } else if (navItem.tagName.toLowerCase() === 'button') {
-      itemPath = navItem.getAttribute('data-page');
+    if (itemPath && (itemPath.startsWith('http') || itemPath.startsWith('//'))) {
+      itemPath = new URL(itemPath, window.location.origin).pathname;
     }
-
-    if (itemPath) {
-      // Handle absolute URLs
-      if (itemPath.startsWith('http') || itemPath.startsWith('//')) {
-        const url = new URL(itemPath, window.location.origin);
-        itemPath = url.pathname;
-      }
-
-      // Compare itemPath with currentPath
-      if (itemPath === currentPath) {
-        // Apply the --primary-color style to this nav item
-        navItem.classList.add('active-nav-item');
-      }
+    if (itemPath === currentPath) {
+      navItem.classList.add('active-nav-item');
     }
   });
 
-  // Add click event listeners to buttons for navigation
+
+
+  // ADD CLICK EVENT LISTENERS
   navItems.forEach(navItem => {
     if (navItem.tagName.toLowerCase() === 'button') {
       const page = navItem.getAttribute('data-page');
@@ -59,12 +48,17 @@ fetch('nav/nav.html')
     }
   });
 
-  // Nav Scrolling
-  let lastScrollTop = 0;
+
+
+  // NAV SCROLL HIDE
+
+  const scrollThreshold = 5; // scroll amt before hiding
+
+
+  let lastScrollTop = 0; //start from 0
   const root = document.documentElement;
   const nav = navbarElement.querySelector('nav');
   const navHeight = getComputedStyle(root).getPropertyValue('--nav-height');
-  const scrollThreshold = 5; // amount to scroll down
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -82,9 +76,23 @@ fetch('nav/nav.html')
     }
   });
 
-  // Hamburger code
-  const hamburger = navbarElement.querySelector('.hamburger');
+
+  // HAMBURGER CODE
+  const hamburger = document.querySelector('.hamburger');
   hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger--open');
     navButtons.classList.toggle('nav-buttons--open');
   });
+
+
+  // Close nav-buttons on click (Mobile)
+  navItems.forEach(navItem => {
+    navItem.addEventListener('click', () => {
+      navButtons.classList.remove('nav-buttons--open'); // Close the nav menu
+      hamburger.classList.remove('hamburger--open'); // Reset the hamburger icon
+    });
+  });
+
+
+
 });

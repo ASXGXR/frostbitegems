@@ -34,7 +34,7 @@
 <style>
 
   :root {
-    --nav-height: 13vh;
+    --nav-height: 12vh;
     --bg-color: var(--page-bg);
     --hamburger-color: var(--white);
   }
@@ -160,7 +160,7 @@
   /* Media query for smaller screens */
   @media (max-width: 768px) {
     .nav-buttons {
-      display: none;
+      display: flex;
       flex-direction: column;
       position: absolute;
       top: var(--nav-height);
@@ -169,13 +169,18 @@
       width: 100%;
       padding: 0;
       margin: 0;
-      z-index: 10000;
       gap: 0px;
-    }
-    .hamburger {
-      display: flex;
+      z-index: 10000;
+      overflow: hidden;
+
+      /* Smooth transition */
+      max-height: 0; 
+      transition: max-height 0.4s ease-out;
     }
     .nav-buttons.nav-buttons--open {
+      max-height: 30vh;
+    }
+    .hamburger {
       display: flex;
     }
     .nav-btn {
