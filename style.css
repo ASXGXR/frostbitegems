@@ -969,6 +969,9 @@ button:active .move-right {
   .event {
     position: relative;
   }
+  .events-section {
+    background: none;
+  }
   .contact-wrapper {
     padding: 28vmin var(--side-padding);
     padding-bottom: 18vmin;
@@ -978,6 +981,9 @@ button:active .move-right {
     display: none;
   }
   .client-fave-header {
+    display: none;
+  }
+  .insta-wrapper {
     display: none;
   }
 }
