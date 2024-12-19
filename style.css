@@ -1035,3 +1035,67 @@ button:active .move-right {
   width: 100%;
   gap: 120px;
 }
+
+
+
+footer {
+  background-color: var(--secondary-color);
+  color: #000; /* Black text for contrast */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-subscription h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.subscription-form {
+  gap: 10px;
+  display: flex;
+  margin: 15px 0;
+}
+
+.subscription-form input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.subscription-form button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #444;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-links a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  transition: color 0.1s ease;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.footer-wrapper {
+  gap: 48px;
+  display: flex;
+  flex-direction: column;
+}
