@@ -25,9 +25,15 @@
   --light-grey: #E3E3E7;
   --dark-grey: #141c30;
   --section-padding: 12vmin;
-  --primary-color: #92C1FF;
+  --primary-colour: #92C1FF;
   --secondary-color: #152335;
   --tertiary-font: 'Rock Salt', cursive;
+  --side-padding: 22vmin;
+}
+
+::selection {
+  background-color: var(--primary-colour); /* Primary colour with fallback */
+  color: #ffffff; /* White text for better contrast */
 }
 
 
@@ -150,7 +156,7 @@ a {
 }
 
 .hero-image {
-  height: 68vmin;
+  height: 62vmin;
   width: auto;
   position: absolute;
   right: 0;
@@ -158,6 +164,9 @@ a {
   transform: scaleX(-1);
   filter: drop-shadow(0px 0px 10px rgba(146, 193, 255, 0.333));
   z-index: 0;
+}
+.hero-image img {
+  height: 100%;
 }
 
 
@@ -179,7 +188,6 @@ a {
   font-size: 6vmin;
   line-height: 110%;
   color: var(--white);
-  cursor: default;
 }
 
 
@@ -510,32 +518,32 @@ button:active .move-right {
 
 .star-1 {
   color: #F9F3EE;
-  top: -10%;
-  left: -10%;
+  top: -1vmin;
+  left: -6vmin;
   transform: rotate(0deg);
   animation-delay: calc(3*var(--sparkle-dur)/4); /* 3 */
 }
 
 .star-2 {
   color: #E1F8DC;
-  bottom: -32%;
-  left: 10%;
+  bottom: -5.5vmin;
+  left: 4vmin;
   transform: rotate(45deg);
   animation-delay: calc(var(--sparkle-dur)/2); /* 2 */
 }
 
 .star-3 {
   color: #B8AFE6;
-  top: -25%;
-  left: 60%;
+  top: -5vmin;
+  left: 36vmin;
   transform: rotate(-45deg);
   animation-delay: 0s; /* 0 */
 }
 
 .star-4 {
   color: #AEE1CD;
-  right: -10%;
-  bottom: 5%;
+  right: -4vmin;
+  bottom: 2vmin;
   transform: rotate(90deg);
   animation-delay: calc(var(--sparkle-dur)/4); /* 1 */
 }
@@ -663,7 +671,7 @@ button:active .move-right {
 
 .footer-nav a:hover,
 .footer-socials a:hover {
-  color: var(--primary-color); /* Accent color */
+  color: var(--primary-colour); /* Accent color */
 }
 
 .footer-socials a {
@@ -787,6 +795,9 @@ button:active .move-right {
   font-family: monospace;
   font-weight: bold;
 }
+.show-smile-wrapper {
+  display: none;
+}
 
 
 
@@ -799,18 +810,83 @@ button:active .move-right {
   .foil-bg {
     display: none;
   }
+
+  .hero-image {
+    right: var(--side-padding);
+  }
+
+  .show-smile {
+    display: none;
+  }
+  .show-smile-wrapper {
+    align-self: center;
+    display: flex;
+    gap: 5vmin;
+  }
+  .show-smile-text {
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    font-size: unset;
+  }
+
+  h2 {
+    font-size: 6vmin !important;
+  }
+
+
+  .smile-text-wrapper {
+    width: 24vmin;
+  }
+  .smile-text-wrapper > * {
+    width: 100%;
+  }
+
+  .review-wrapper {
+    gap: 2vmin;
+  }
+  .rated-5 {
+    width: 13vmin;
+  }
+  .review-icons {
+    width: 19vmin;
+    order: 0;
+  }
+
+  .hero-text {
+    font-size: 7vmin;
+  }
+  
+  .hero-image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Adjust for size */
+    height: 150%;
+    background-color: var(--primary-colour, #6bb7ff); /* Replace with your primary colour */
+    border-radius: 20vmin; /* Oval shape */
+    transform: translate(-50%, -50%); /* Centers the oval */
+    z-index: -1; /* Pushes it behind the image */
+  }
+
+  .hero-content {
+    margin-top: var(--nav-height);
+  }
+
   .hero-logo {
     padding: 20px 36px;
+  }
+  .hero-logo-whole {
+    display: none;
   }
   .hero-section {
     width: 75vw;
   }
-  .contact-contents {
-    flex-direction: row;
-    width: 50%;
-  }
-  .hero-wrapper {
-    padding: 6% 24%;
+  .section {
+    align-items: unset;
+    padding: 6% var(--side-padding);
   }
   .event {
     flex-direction: row;
@@ -822,8 +898,40 @@ button:active .move-right {
     top: -94%;
     left: 28%;
   }
+  .carousel-wrapper {
+    width: 100%;
+  }
+  .slider-new {
+    height: 40vmin;
+    margin: 0;
+    width: 100%;
+  }
+
+  .get-in-touch {
+    display: none;
+  }
+  .discount-slider {
+    display: none;
+  }
+  .carousel-wrapper {
+    order: 2;
+  }
+  .frostbite-logo-smile {
+    align-self: center;
+  }
+
   .event {
     position: relative;
+  }
+  .contact-wrapper {
+    padding: 20vmin var(--side-padding);
+    background: #152133;
+  }
+  .contact-bg {
+    display: none;
+  }
+  .client-fave-header {
+    display: none;
   }
 }
 

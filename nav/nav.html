@@ -1,12 +1,17 @@
 <!-- nav.html -->
 <nav id="nav">
 
-  <!-- PAGE BUTTONS -->
-  <div class="nav-buttons">
+  <div class="left-nav">
+    <img class="nav-logo" src="images/SVG-logo.svg">
+  </div>
 
-    <!-- <a href="terms.html" class="nav-btn">TERMS</a>
-    <a href="terms.html" class="nav-btn">ABOUT</a> -->
-    <button class="nav-btn book-btn hover-scale" style="--scale: 1.07;" >
+  <div class="right-nav">
+
+    <div class="nav-item">ABOUT</div>
+    <div class="nav-item">CONTACT</div>
+
+    <!-- BOOK Button -->
+    <button class="book-btn hover-scale" style="--scale: 1.07;" >
       <svg class="arrow-img move-right" 
         width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_111_145)">
@@ -22,56 +27,63 @@
       BOOK-IN
     </button>
 
+    <!-- Hamburger icon -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <style>
+        .hamburger {
+          gap: 8px;
+          display: none;
+          cursor: pointer;
+          margin-left: auto;
+          justify-content: center;
+          flex-direction: column;
+          width: 28px; height: 28px;
+          transition: transform 0.6s ease;
+        }
+        .hamburger:hover {
+          transform: scale(1.2);
+        }
+        .hamburger span {
+          width: 100%;
+          height: 2px;
+          border-radius: 1px;
+          background-color: var(--white);
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        /* Turning Hamburger into X */
+        .hamburger.hamburger--open span:nth-child(1) {
+          transform: rotate(45deg) translate(3px, 4px);
+        }
+        .hamburger.hamburger--open span:nth-child(2) {
+          transform: rotate(-45deg) translate(3px, -4px);
+        }
+      </style>
+    </div>
+
   </div>
 
-  <!-- Hamburger icon -->
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <style>
-      .hamburger {
-        gap: 8px;
-        display: none;
-        cursor: pointer;
-        margin-left: auto;
-        justify-content: center;
-        flex-direction: column;
-        width: 28px; height: 28px;
-        transition: transform 0.6s ease;
-      }
-      .hamburger:hover {
-        transform: scale(1.2);
-      }
-      .hamburger span {
-        width: 100%;
-        height: 2px;
-        border-radius: 1px;
-        background-color: var(--white);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-      }
-      /* Turning Hamburger into X */
-      .hamburger.hamburger--open span:nth-child(1) {
-        transform: rotate(45deg) translate(3px, 4px);
-      }
-      .hamburger.hamburger--open span:nth-child(2) {
-        transform: rotate(-45deg) translate(3px, -4px);
-      }
-    </style>
-  </div>
 </nav>
 
 <style>
 
   :root {
-    --nav-height: 12vh;
+    --nav-height: 16vh;
     --bg-color: var(--page-bg);
   }
 
+  .right-nav {
+    gap: 5.9vmin;
+    display: flex;
+    align-items: center;
+  }
+
   nav {
-    justify-content: flex-end;
+    justify-content: space-between;
     height: var(--nav-height);
     align-items: center;
-    padding: 32px 64px;
+    padding: 32px var(--side-padding);
     display: flex;
     width: 100%;
 
@@ -83,25 +95,28 @@
     /* background: linear-gradient(to bottom, var(--white) 35%, transparent); */
     background: linear-gradient(to bottom, var(--page-bg) 75%, transparent);
   }
-  
-  .line-logo-nav {
-    height: 32px;
-  }
-
-  .active-nav-item {
-    color: var(--primary-color);
-  }
 
   .nav-logo {
+    padding: 24px;
+    margin: -24px; /* Outer spacing */
+    box-sizing: content-box; /* Ensures padding adds to element size */
     gap: 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    width: 120px;
+    width: 26vmin;
     height: auto;
     cursor: pointer;
     object-fit: contain;
+  }
+
+  .nav-item {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .nav-item:hover {
+    color: var(--primary-colour);
   }
 
   .nav-logo img {
@@ -110,7 +125,7 @@
 
   .logo-text {
     font-size: 12px;
-    color: var(--primary-color);
+    color: var(--primary-colour);
   }
 
   .nav-buttons {
@@ -126,12 +141,12 @@
   }
 
   .nav-special {
-    /* color: var(--primary-color);
+    /* color: var(--primary-colour);
     padding: 20px 40px; */
   }
 
   .nav-btn:hover {
-    color: var(--primary-color);
+    color: var(--primary-colour);
   }
 
   .nav-btn:active {
@@ -149,7 +164,7 @@
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: var(--primary-color); /* Change this to your preferred underline color */
+    background-color: var(--primary-colour); /* Change this to your preferred underline color */
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.6s ease;
@@ -167,6 +182,9 @@
 
   /* Media query for smaller screens */
   @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
     .nav-buttons {
       display: flex;
       flex-direction: column;

@@ -72,7 +72,9 @@
     <img class="foil-bg unselectable" src="foil-background.png"/>
 
     <!-- Hero Image -->
-    <img class="hero-image unselectable" src="images/hero-image-filter.png"/>
+    <div class="hero-image unselectable">
+      <img class="unselectable" src="images/hero-image-filter.png" />
+    </div>
 
   </div>
 
@@ -84,7 +86,19 @@
       <!-- Show Your Smile Img -->
       <img class="show-smile hover-scale unselectable" style="--scale: 1;" src="images/show-your-smile.png"/>
 
-      <h2 class="subtitle no-split">OUR CLIENT'S FAVES</h2>
+      <div class="show-smile-wrapper">
+        <h2 class="show-smile-text">SHOW OFF YOUR</h1>
+        <div class="smile-text-wrapper">
+          <img src="images/smile-text.png">
+          <img src="images/smile-line.svg">
+        </div>
+        <h2 class="show-smile-text">WITH FROSTBITE</h1>
+        <!-- <div class="smile-text-wrapper frostbite-logo-smile">
+          <img src="images/SVG-logo.svg">
+        </div> -->
+      </div>
+
+      <h2 class="subtitle no-split client-fave-header">OUR CLIENT'S FAVES</h2>
       
       <!-- Image Carousel - Amended by JS -->
       <div class="carousel-wrapper">
@@ -110,7 +124,7 @@
       </div>
 
       <!-- Button -->
-      <button class="contact-btn hover-scale" style="--scale: 1.04;">
+      <button class="contact-btn hover-scale get-in-touch" style="--scale: 1.04;">
         GET IN TOUCH
         <p class="move-right no-split">-></p>
       </button>

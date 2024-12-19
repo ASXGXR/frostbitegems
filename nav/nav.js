@@ -17,8 +17,6 @@ fetch('nav/nav.html')
     `);
   }
 
-
-
   // HIGHLIGHT PAGE USER IS ON
   const currentPath = window.location.pathname;
   const navItems = navButtons.querySelectorAll('.nav-btn');
