@@ -2,7 +2,7 @@
 <nav id="nav">
 
   <div class="left-nav">
-    <img class="nav-logo" src="images/SVG-logo.svg">
+    <img class="nav-logo hover-scale" src="images/SVG-logo.svg">
   </div>
 
   <div class="right-nav">
@@ -89,7 +89,7 @@
 
     /* Sticky Nav */
     top: 0;
-    z-index: 10;
+    z-index: 100;
     position: fixed;
     transition: top 0.4s;
     /* background: linear-gradient(to bottom, var(--white) 35%, transparent); */
@@ -112,6 +112,8 @@
   }
 
   .nav-item {
+    padding: 12px;
+    margin: -12px;
     cursor: pointer;
     transition: color 0.3s ease;
   }
