@@ -115,10 +115,11 @@
     padding: 12px;
     margin: -12px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   .nav-item:hover {
     color: var(--primary-colour);
+    transform: scale(var(--scale,1.05));
   }
 
   .nav-logo img {

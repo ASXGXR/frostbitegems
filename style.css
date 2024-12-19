@@ -431,6 +431,7 @@ button {
   justify-content: center;
   transition: color ease 0.4s, background-color ease 0.4s, box-shadow ease 0.4s;
   z-index: 100 !important;
+  color: var(--dark-grey);
 }
 a {
   cursor: pointer !important;
@@ -789,6 +790,11 @@ button:active .move-right {
   display: none;
 }
 
+.get-in-touch-new {
+  margin-top: 6vmin;
+  display: none;
+}
+
 
 
 
@@ -944,11 +950,17 @@ button:active .move-right {
   .get-in-touch {
     display: none;
   }
+
+  .get-in-touch-new {
+    align-self: flex-end;
+    display: flex;
+    white-space: nowrap;
+    width: min-content;
+    padding: 24px 36px;
+  }
+
   .discount-slider {
     display: none;
-  }
-  .carousel-wrapper {
-    order: 2;
   }
   .frostbite-logo-smile {
     align-self: center;
@@ -959,6 +971,7 @@ button:active .move-right {
   }
   .contact-wrapper {
     padding: 28vmin var(--side-padding);
+    padding-bottom: 18vmin;
     background: var(--secondary-color);
   }
   .contact-bg {
