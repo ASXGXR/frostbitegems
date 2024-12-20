@@ -824,7 +824,7 @@ button:active .move-right {
   }
   .book-hero:hover {
     color: var(--dark-grey);
-    transform: translateY(-3vmin) scale(1.02); /* Preserve horizontal centering while animating */
+    transform: translateY(-3vmin);
   }
   .book-btn {
     transition: transform 0.45s ease, color 0.45s ease;
