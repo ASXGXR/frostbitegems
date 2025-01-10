@@ -622,64 +622,6 @@ button:active .move-right {
 }
 
 
-/* Footer Styles */
-.footer {
-  align-items: center !important;
-  color: var(--white);
-  padding: 40px 0 !important;
-  text-align: center;
-  z-index: 1;
-}
-
-.footer-wrapper {
-  z-index: 2;
-  max-width: 1200px;
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo {
-  width: 240px;
-  margin: 24px 0px;
-  opacity: 0.85;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-nav a {
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover,
-.footer-socials a:hover {
-  color: var(--primary-colour); /* Accent color */
-}
-
-.footer-socials a {
-  transition: color 0.3s ease;
-  align-items: center;
-  display: flex;
-  gap: 4px;
-}
-
-.footer-bottom {
-  opacity: 0.7;
-  font-size: 12px;
-  color: var(--white);
-}
-
-
-
 /* Image Sliders */
 .image-slider {
   position: absolute;
@@ -1037,12 +979,73 @@ button:active .move-right {
 }
 
 
+/* FOOTER */
 
-footer {
+.footer {
+  align-items: center !important;
+  color: var(--white);
+  padding: 40px 0 !important;
+  text-align: center;
+  z-index: 1;
   background-color: var(--secondary-color);
-  color: #000; /* Black text for contrast */
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+}
+
+.footer-subscription {
+  flex-direction: column;
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+
+.footer-wrapper {
+  z-index: 2;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 240px;
+  margin: 24px 0px;
+  opacity: 0.85;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-socials a:hover {
+  color: var(--primary-colour); /* Accent color */
+}
+
+.footer-socials a {
+  transition: color 0.3s ease;
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.footer-bottom {
+  opacity: 0.7;
+  font-size: 12px;
+  color: var(--white);
+}
+
+footer h3 {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-subscription h3 {
@@ -1053,27 +1056,27 @@ footer {
 .subscription-form {
   gap: 10px;
   display: flex;
-  margin: 15px 0;
 }
 
 .subscription-form input {
   flex: 1;
   padding: 10px;
-  border: 2px solid #000;
+  border: 2px solid var(--page-bg);
   border-radius: 5px;
 }
 
 .subscription-form button {
   padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: var(--white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-
 .subscription-form button:hover {
-  background-color: #444;
+  color: black;
+  background-color: var(--white);
 }
 
 .footer-links {
@@ -1083,19 +1086,18 @@ footer {
 
 .footer-links a {
   display: block;
-  color: #000;
   text-decoration: none;
   margin-bottom: 5px;
   font-size: 0.9rem;
-  transition: color 0.1s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: var(--primary-colour);
 }
 
 .footer-wrapper {
-  gap: 48px;
+  gap: 32px;
   display: flex;
   flex-direction: column;
 }
